@@ -15,7 +15,6 @@ else:
     wdir_origin = ['E:\\DATA\\perspective-change\\demo_origin\\']
     wdir_offset = ['E:\\DATA\\perspective-change\\demo_offset\\']
 
-#ALL FILES ARE PULLED FROM EVERY FOLDER LISTED IN "WDIR"
 starting_point = 0
 cutoff = None
 
