@@ -15,7 +15,6 @@ else:
     wdir_origin = ['E:\\DATA\\perspective-change\\demo_origin\\']
     wdir_offset = ['E:\\DATA\\perspective-change\\demo_offset\\']
 
-#Test Commit
 
 starting_point = 0
 cutoff = None
@@ -29,7 +28,6 @@ h,w = 512,512
 
 channels = 3
 
-#IMAGES WILL BE PROCESSED IN CHUNKS, WHICH WILL BE SAVED AND COMPRESSED AS .NPZ
 chunk_length = 1000
 
 bar = Bar('Processing',max = len(raw_images_origin))
