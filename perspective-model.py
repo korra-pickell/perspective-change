@@ -15,7 +15,7 @@ checkpoint_dir = ''
 epoch_count = 1000
 
 BUFFER_SIZE = 10000
-BATCH_SIZE = 100
+BATCH_SIZE = 1
 IMG_WIDTH = 512
 IMG_HEIGHT = 512
 
@@ -307,7 +307,7 @@ test_dataset_y = test_file['y']
 
 test_dataset = tf.data.Dataset.from_tensor_slices((test_dataset_x,test_dataset_y))#.batch(BATCH_SIZE)
 
-
+'''
 for epoch_number in range(epoch_count):
     for file_index,file in enumerate(training_files):
 
@@ -322,4 +322,15 @@ for epoch_number in range(epoch_count):
         print('A-5')
 
         fit(train_dataset, file_index, 1, test_dataset, epoch_number)
+'''
 
+train_file = np.load(training_files[0],allow_pickle=True)
+train_dataset_np_x = train_file['x']
+print('A-1')
+train_dataset_np_y = train_file['y'].astype('float32')
+print('A-2')
+train_dataset = tf.data.Dataset.from_tensor_slices((train_dataset_np_x,train_dataset_np_y)).batch(BATCH_SIZE)#.shuffle(BUFFER_SIZE)
+    
+for epoch_number in range(epoch_count):
+
+    fit(train_dataset, 0, 1, test_dataset, epoch_number)
