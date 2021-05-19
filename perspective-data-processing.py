@@ -30,7 +30,7 @@ for index,name in enumerate(raw_images_origin):
 
 wkdir = os.path.dirname(os.path.realpath(__file__))
 
-h,w = 512,512
+h,w = 256,256
 
 channels = 3
 
