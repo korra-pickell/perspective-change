@@ -9,11 +9,11 @@ save_dir = 'E:/DATA/NPY/perspective-change'
 label = 'train'
 
 if label == 'train':
-    wdir_origin = ['E:\\DATA\\perspective-change\\index_0_origin\\']
-    wdir_offset = ['E:\\DATA\\perspective-change\\index_0_offset\\']
+    wdir_origin = ['E:\\DATA\\perspective-change\\index_1_origin\\']
+    wdir_offset = ['E:\\DATA\\perspective-change\\index_1_offset\\']
 else:
-    wdir_origin = ['E:\\DATA\\perspective-change\\demo_origin\\']
-    wdir_offset = ['E:\\DATA\\perspective-change\\demo_offset\\']
+    wdir_origin = ['E:\\DATA\\perspective-change\\demo_origin_1\\']
+    wdir_offset = ['E:\\DATA\\perspective-change\\demo_offset_1\\']
 
 
 starting_point = 0
