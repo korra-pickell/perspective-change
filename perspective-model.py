@@ -16,8 +16,8 @@ epoch_count = 1000
 
 BUFFER_SIZE = 10000
 BATCH_SIZE = 1
-IMG_WIDTH = 512
-IMG_HEIGHT = 512
+IMG_WIDTH = 256
+IMG_HEIGHT = 256
 
 OUTPUT_CHANNELS = 3
 
@@ -78,11 +78,11 @@ def Generator():
         downsample(512, 4),    # (bs, 4, 4, 512)
         downsample(512, 4),    # (bs, 2, 2, 512)
         downsample(512, 4),    # (bs, 1, 1, 512)
-        downsample(512, 4),    # (bs, 1, 1, 512)
+        #downsample(512, 4),    # (bs, 1, 1, 512)
     ]
 
     up_stack = [
-        upsample(512, 4, apply_dropout=True),    # (bs, 2, 2, 1024)
+        #upsample(512, 4, apply_dropout=True),    # (bs, 2, 2, 1024)
         upsample(512, 4, apply_dropout=True),    # (bs, 2, 2, 1024)
         upsample(512, 4, apply_dropout=True),    # (bs, 4, 4, 1024)
         upsample(512, 4, apply_dropout=True),    # (bs, 8, 8, 1024)
