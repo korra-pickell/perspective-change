@@ -122,7 +122,7 @@ generator = Generator()
 
 plot_model(
     generator,
-    to_file='E:\\Documents\\PRGM\\NEURAL\\SCENE RELIGHTING\\visuals\\model_gen.png',
+    to_file='E:\\Documents\\PRGM\\NEURAL\\perspective-change\\visuals\\model_gen.png',
     show_shapes=True,
     show_layer_names=True,
     rankdir='TB',
@@ -219,7 +219,7 @@ def generate_images(model, test_input, tar, file_index, epoch):
         plt.title(title[int(i%columns)])
         plt.imshow(img)
         plt.axis('off')
-    plt.savefig('output_'+str(epoch)+'_'+str(file_index)+'.png')
+    plt.savefig('E:\\DATA\\img_output\\perspective-change\\output_'+str(epoch)+'_'+str(file_index)+'.png')
     plt.close()
 
 #NUMBER OF EPOCHS PER FILE
@@ -289,7 +289,7 @@ def fit(train_ds, file_index, epochs, test_ds, epoch_number):
 
         
 
-d = ''
+d = 'E:\\DATA\\NPY\\perspective-change\\'
 
 cutoff = None
 
