@@ -34,7 +34,7 @@ h,w = 512,512
 
 channels = 3
 
-chunk_length = 3000
+chunk_length = 2000
 
 bar = Bar('Processing',max = len(raw_images_origin))
 
