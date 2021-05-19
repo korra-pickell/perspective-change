@@ -45,7 +45,7 @@ for chunk_index,chunk in enumerate([raw_images_origin[i:i+chunk_length] for i in
         xy = []
 
         image_origin = Image.open(raw_image).resize((w,h))
-        image_offset = Image.open(raw_images_origin[index]).resize((w,h))
+        image_offset = Image.open(raw_images_offset[index]).resize((w,h))
         
         image_origin_array = np.array(image_origin)/127.5 - 1
         image_offset_array = np.array(image_offset)/127.5 - 1

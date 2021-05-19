@@ -171,7 +171,7 @@ discriminator = Discriminator()
 
 plot_model(
     discriminator,
-    to_file='',
+    to_file='E:\\Documents\\PRGM\\NEURAL\\perspective-change\\visuals\\model_dis.png',
     show_shapes=True,
     show_layer_names=True,
     rankdir='TB',
@@ -191,8 +191,8 @@ generator_optimizer = tf.keras.optimizers.Adam(2e-4, beta_1=0.5)
 discriminator_optimizer = tf.keras.optimizers.Adam(2e-4, beta_1=0.5)
 
 
-checkpoint_prefix = os.path.join(checkpoint_dir, "ckpt")
-checkpoint = tf.train.Checkpoint(generator_optimizer=generator_optimizer,discriminator_optimizer=discriminator_optimizer,
+#checkpoint_prefix = os.path.join(checkpoint_dir, "ckpt")
+#checkpoint = tf.train.Checkpoint(generator_optimizer=generator_optimizer,discriminator_optimizer=discriminator_optimizer,
                                generator=generator,discriminator=discriminator)
 
 def generate_images(model, test_input, tar, file_index, epoch):
@@ -281,8 +281,8 @@ def fit(train_ds, file_index, epochs, test_ds, epoch_number):
         
         generate_images(generator, test_dataset_x, test_dataset_y, file_index, epoch_number)
 
-        print('SAVING CKPT')
-        checkpoint.save(file_prefix=checkpoint_prefix)
+        #print('SAVING CKPT')
+        #checkpoint.save(file_prefix=checkpoint_prefix)
 
         print ('Time taken for epoch {} is {} sec\n'.format(epoch + 1,time.time()-start))
 
