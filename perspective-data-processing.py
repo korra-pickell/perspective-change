@@ -4,7 +4,7 @@ import numpy as np
 from progress.bar import Bar
 import h5py
 
-save_dir = 'E:/DATA/NPY/perspective-change/'
+save_dir = 'E:/DATA/NPY/perspective-change'
 
 label = 'train'
 
