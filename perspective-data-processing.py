@@ -28,8 +28,6 @@ for index,name in enumerate(raw_images_origin):
         print(name,raw_images_offset[index])
 '''
 
-stop = input('....')
-
 wkdir = os.path.dirname(os.path.realpath(__file__))
 
 h,w = 512,512
