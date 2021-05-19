@@ -14,7 +14,7 @@ checkpoint_dir = ''
 
 epoch_count = 1000
 
-BUFFER_SIZE = 500
+BUFFER_SIZE = 10000
 BATCH_SIZE = 100
 IMG_WIDTH = 512
 IMG_HEIGHT = 512
