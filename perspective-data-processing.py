@@ -6,7 +6,7 @@ import h5py
 
 save_dir = 'E:/DATA/NPY/perspective-change/'
 
-label = 'test'
+label = 'train'
 
 if label == 'train':
     wdir_origin = ['E:\\DATA\\perspective-change\\index_0_origin\\']
@@ -21,6 +21,14 @@ cutoff = None
 
 raw_images_origin = [a for b in [[d+x for x in os.listdir(d)] for d in wdir_origin] for a in b][starting_point:cutoff]
 raw_images_offset = [a for b in [[d+x for x in os.listdir(d)] for d in wdir_offset] for a in b][starting_point:cutoff]
+
+'''
+for index,name in enumerate(raw_images_origin):
+    if (name.split('.')[1] != raw_images_offset[index].split('.')[1]):
+        print(name,raw_images_offset[index])
+'''
+
+stop = input('....')
 
 wkdir = os.path.dirname(os.path.realpath(__file__))
 
