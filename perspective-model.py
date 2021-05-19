@@ -193,7 +193,7 @@ discriminator_optimizer = tf.keras.optimizers.Adam(2e-4, beta_1=0.5)
 
 #checkpoint_prefix = os.path.join(checkpoint_dir, "ckpt")
 #checkpoint = tf.train.Checkpoint(generator_optimizer=generator_optimizer,discriminator_optimizer=discriminator_optimizer,
-                               generator=generator,discriminator=discriminator)
+#                               generator=generator,discriminator=discriminator)
 
 def generate_images(model, test_input, tar, file_index, epoch):
 
