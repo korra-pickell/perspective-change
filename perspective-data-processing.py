@@ -34,9 +34,9 @@ h,w = 256,256
 
 channels = 3
 
-chunk_length = 2000
+chunk_length = 5000
 
-bar = Bar('Processing',max = len(raw_images_origin))
+bar = Bar('Processing', max = len(raw_images_origin), suffix = '%(percent).1f%% - %(eta)ds')
 
 for chunk_index,chunk in enumerate([raw_images_origin[i:i+chunk_length] for i in range(0,len(raw_images_origin),chunk_length)]):
     x_data, y_data = [],[]
